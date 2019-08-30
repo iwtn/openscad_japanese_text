@@ -13,7 +13,17 @@ japanese_fonts = [
   "Hiragino Sans GB",
 ];
 
-echo(len(japanese_fonts));
-text(txt, font = japanese_fonts[0]);
+fonts_size = len(japanese_fonts);
+
+for(index = [1 : len(japanese_fonts)]) {
+  font_name = japanese_fonts[index - 1];
+  translate([0, 0, index * 20])
+    text(txt, font = font_name);
+
+  translate([20, 0, index * 20])
+    text(font_name, font = font_name);
+}
 
 $vpr = [-30, 30, 0];
+$vpt = [100, 0, fonts_size * 10];
+$vpd = 600;
