@@ -22,13 +22,13 @@ module nok() {
 
 module plate() {
   translate([0, 38, -4.5])
-  cube([120, 90, 5], center = true);
+  cube([120, 90, 4], center = true);
 }
 
 difference() {
   plate();
 
-  translate([0, 0, -2])
+  translate([0, 0, -3])
   nok();
 }
 
