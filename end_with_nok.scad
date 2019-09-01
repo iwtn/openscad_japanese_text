@@ -6,18 +6,19 @@ txt_nok = "Ⓝ◯Ⓚ";
 font_name = "Hiragino Mincho ProN";
 
 font_size = 14;
+linear_extrude(height = 3) {
+  translate([0, 60, 0])
+  text(txt_end, font = font_name, size = font_size, halign = "center");
 
-translate([0, 60, 0])
-text(txt_end, font = font_name, size = font_size, halign = "center");
+  translate([0, 40, 0])
+  text(txt_seisaku, font = font_name, size = font_size, halign = "center");
 
-translate([0, 40, 0])
-text(txt_seisaku, font = font_name, size = font_size, halign = "center");
+  translate([0, 20, 0])
+  text(txt_bar, font = font_name, size = font_size, halign = "center");
 
-translate([0, 20, 0])
-text(txt_bar, font = font_name, size = font_size, halign = "center");
-
-translate([0, 0, 0])
-text(txt_nok, font = font_name, size = font_size, halign = "center");
+  translate([0, 0, 0])
+  text(txt_nok, font = font_name, size = font_size, halign = "center");
+}
 
 // viewport settings
 $vpr = [-30, 30, 0];
